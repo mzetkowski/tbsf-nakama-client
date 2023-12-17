@@ -1,0 +1,18 @@
+{
+    "name": "com.crookedhead.tbsf.nakama",
+    "version": "1.0.0",
+    "displayName": "Turn Based Strategy Framework Nakama Client",
+    "description": "Nakama Unity client for Turn Based Strategy Framework",
+    "unity": "2020.3",
+    "keywords": [
+        "online",
+        "multiplayer"
+    ],
+    "author": {
+        "name": "Crooked Head",
+        "email": "crookedhead@outlook.com"
+    },
+    "changelogUrl":"https://github.com/mzetkowski/tbsf-nakama-client/blob/master/CHANGELOG.md",
+    "documentationUrl":"https://github.com/mzetkowski/tbsf-nakama-client/blob/master/README.md",
+    "licenseUrl":"https://github.com/mzetkowski/tbsf-nakama-client/blob/master/LICENSE.md"
+}
