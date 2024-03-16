@@ -6,6 +6,7 @@ This Unity package contains the Nakama Client implementation for the Turn Based 
 ## Prerequisites
 - Unity version 2020.3 or higher.
 - Turn Based Strategy Framework version 3.0 or higher.
+- Git version control system
 - Nakama Unity SDK version 3.10.1 or higher.
 
 ## Installing Turn Based Strategy Framework
@@ -90,6 +91,11 @@ In case you encounter issues during the installation or operation of the TBSF Na
    - **Error Message:** `Cannot perform upm operation: Unable to add package [https://github.com/mzetkowski/tbsf-nakama-client.git?path=/Packages/tbsf-nakama-client#<branch-name>]: Could not clone [https://github.com/mzetkowski/tbsf-nakama-client.git]. Make sure [<branch-name>] is a valid branch name, tag, or full commit hash on the remote registry.`
    - **Cause:** The specified revision in the package URL is incorrect or does not exist.
    - **Solution:** Verify and provide a valid package URL. Replace `<branch-name>` with a valid branch name, tag, or full commit hash. A list of available branches and tags can be found on the main page of the repository.
+
+4. **Missing Git version control system**
+   - **Error Message:** `Error adding package: [https://github.com/mzetkowski/tbsf-nakama-client.git?path=/Packages/tbsf-nakama-client#<branch-name>]. Unable to add package [https://github.com/mzetkowski/tbsf-nakama-client.git?path=/Packages/tbsf-nakama-client#<branch-name>]: No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`
+   - **Cause:** Git version control system is not installed on your machine
+   - **Solution:** Install [Git](https://git-scm.com/) and restart Unity
 
 ## Contact and Support
 If you have any questions, feedback, or need assistance with the TBSF Nakama Client, feel free to reach out. You can contact me directly via email at crookedhead@outlook.com for specific queries or suggestions. Additionally, for broader community support and discussions, join the TBSF Discord server: [TBSF Discord](https://discord.gg/uBJNPJHFjB). This platform is ideal for connecting with other TBSF users, sharing experiences, and getting help from the community.
