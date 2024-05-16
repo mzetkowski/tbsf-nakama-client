@@ -67,10 +67,15 @@ The `TBSF Nakama Client` package includes a single script named `NakamaConnectio
 Within the Turn Based Strategy Framework, there are several demo scenes located in the `Assets/Examples` folder. Each of these scenes has a multiplayer counterpart designed for network play. To utilize `NakamaConnection` in these scenes, follow these steps:
 
 1. **Create a New GameObject:** In your desired scene, create a new GameObject.
+
 2. **Attach NakamaConnection Script:** Attach the `NakamaConnection` script to this newly created GameObject.
+
 3. **Configure Server Address:** Enter the address of your Nakama server in the `host` field of the `NakamaConnection` script.
+
 4. **Assign CellGrid GameObject**: Assign the CellGrid GameObject from the scene to the `CellGrid` field of the `NakamaConnection` script.
+
 5. **Set Up Network GUI:** Locate the `NetworkGUI` GameObject in your scene. Assign the GameObject with the `NakamaConnection` script to the `NetworkConnection` field in the `NetworkGUI`.
+
 6. **Set Up CellGrid:** The multiplayer scene includes game end conditions for host or player disconnections. Configure these by assigning the `NakamaConnection` script to `NetworkConnection` fields on the `PlayerDisconnectedCondition` and `HostDisconnectedCondition` attached to the `CellGrid` GameObject.
 
 This setup integrates the `NakamaConnection` with your chosen scene. For more in-depth details and guidelines, refer to the TBSF documentation that accompanies the Framework.
