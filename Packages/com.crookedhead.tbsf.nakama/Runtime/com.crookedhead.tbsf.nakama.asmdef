@@ -2,7 +2,8 @@
     "name": "com.crookedhead.tbsf.nakama",
     "rootNamespace": "",
     "references": [
-        "GUID:524ce4c8abeffae4fa82078a2c2391d3",
+        "GUID:73e792cf0fd01b3438c14a3a994dd2ce",
+        "GUID:ba1d260f9e69eb6409c598826f52f7b9",
         "GUID:69810832b544b46da9804f1af9373521"
     ],
     "includePlatforms": [],

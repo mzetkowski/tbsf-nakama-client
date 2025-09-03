@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.WebSockets;
 using System.Threading.Tasks;
-using TbsFramework.Network;
-using TbsFramework.Network.Exceptions;
+using TurnBasedStrategyFramework.Common.Network;
+using TurnBasedStrategyFramework.Unity.Network;
 using UnityEngine;
 
 namespace TbsfNakamaClient
@@ -238,7 +238,7 @@ namespace TbsfNakamaClient
 
             return matches;
         }
-        public async override void SendMatchState(long opCode, IDictionary<string, string> actionParams)
+        public async override void SendMatchState(long opCode, IDictionary<string, object> actionParams)
         {
             await _socket.SendMatchStateAsync(_currentMatchId, opCode, actionParams.ToJson());
         }
@@ -277,7 +277,7 @@ namespace TbsfNakamaClient
         }
         private void OnReceivedMatchState(IMatchState matchState)
         {
-            var actionParams = System.Text.Encoding.UTF8.GetString(matchState.State).FromJson<Dictionary<string, string>>();
+            var actionParams = System.Text.Encoding.UTF8.GetString(matchState.State).FromJson<Dictionary<string, object>>();
             var actionHandler = Handlers[matchState.OpCode];
             actionHandler(actionParams);
         }
