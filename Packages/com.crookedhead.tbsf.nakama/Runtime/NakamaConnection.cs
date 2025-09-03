@@ -22,7 +22,7 @@ namespace TbsfNakamaClient
     /// interface with this custom server's unique functionalities. This includes handling specialized authentication, matchmaking,
     /// room management, and real-time communication processes.
     /// 
-    /// For more details on deploying the custom Nakama server, refer to the GitHub repository at: [GitHub Link]
+    /// For more details on deploying the custom Nakama server, refer to the GitHub repository at: https://github.com/mzetkowski/tbsf-nakama-server
     /// </remarks>
     public class NakamaConnection : NetworkConnection
     {
@@ -325,7 +325,6 @@ namespace TbsfNakamaClient
             };
 
             var response = await _socket.RpcAsync("rpcGetUserProperties", payload.ToJson());
-            //TODO: investigate null payload further
             return response.Payload != null ? response.Payload.FromJson<Dictionary<string, object>>().ToDictionary(kvp => kvp.Key, kvp => kvp.Value.ToString()) : new Dictionary<string, string>();
         }
     }
