@@ -1,6 +1,7 @@
 using Nakama;
 using Nakama.TinyJson;
 using System.Collections.Generic;
+using System;
 using System.Linq;
 using System.Net.WebSockets;
 using System.Threading.Tasks;
@@ -73,7 +74,7 @@ namespace TbsfNakamaClient
             }
             catch (TaskCanceledException)
             {
-                throw new NetworkException("Could not connect to server");
+                throw new Exception("Could not connect to server");
             }
 
             _socket = _client.NewSocket(true);
@@ -107,7 +108,7 @@ namespace TbsfNakamaClient
             if (deserializedResponse.TryGetValue("error", out var errorMessage))
             {
                 InvokeCreateRoomFailed(errorMessage);
-                throw new NetworkException(errorMessage);
+                throw new Exception(errorMessage);
             }
 
             var matchId = deserializedResponse["matchId"];
@@ -163,7 +164,7 @@ namespace TbsfNakamaClient
             {
                 var message = "Room not found";
                 InvokeJoinRoomFailed(message);
-                throw new NetworkException(message);
+                throw new Exception(message);
             }
 
             JoinRoomByID(matchId);
@@ -203,7 +204,7 @@ namespace TbsfNakamaClient
             {
                 var message = "Could not join the room";
                 InvokeJoinRoomFailed(message);
-                throw new NetworkException(message);
+                throw new Exception(message);
             }
         }
         public async override void LeaveRoom()
