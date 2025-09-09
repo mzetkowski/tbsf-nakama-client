@@ -54,6 +54,11 @@ After setting up the Nakama Unity SDK, you can proceed with installing the TBSF 
      ```
      https://github.com/mzetkowski/tbsf-nakama-client.git?path=/Packages/com.crookedhead.tbsf.nakama
      ```
+      > **⚠️ Compatibility Warning**
+      > If you're using the Turn Based Strategy Framework **v3.x**, install the package from the `v1.0.0+TBSF3.0.0` tag. 
+      ```
+      https://github.com/mzetkowski/tbsf-nakama-client.git?path=/Packages/com.crookedhead.tbsf.nakama#v1.0.0+TBSF3.0.0`
+      ```
 4. **Install the Package:**
    - Click 'Add' to install. This action will download and add the TBSF Nakama Client to your Unity project.
 
